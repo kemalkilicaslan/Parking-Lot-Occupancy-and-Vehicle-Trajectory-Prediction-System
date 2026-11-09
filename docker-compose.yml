@@ -1,0 +1,13 @@
+services:
+  parking-occupancy-trajectory:
+    build: .
+    image: parking-lot-occupancy-and-vehicle-trajectory-prediction:latest
+    container_name: parking-lot-occupancy-and-vehicle-trajectory-prediction
+    volumes:
+      - ./:/app                  # input video, model, config and outputs shared with host
+      - torch-cache:/root/.cache # cache torch / ultralytics files between runs
+    # The container runs headless (SHOW_WINDOW=0 is set in the Dockerfile);
+    # the annotated video, CSV and JSON reports are written to the project folder.
+
+volumes:
+  torch-cache:

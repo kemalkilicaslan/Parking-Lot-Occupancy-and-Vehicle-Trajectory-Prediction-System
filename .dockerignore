@@ -1,0 +1,28 @@
+# Version control
+.git
+.gitignore
+
+# Python cache and virtual environments
+__pycache__/
+*.pyc
+*.pyo
+.venv/
+venv/
+
+# Large media and model artifacts (mounted at runtime via volume)
+*.mp4
+*.mov
+*.avi
+*.webp
+*.png
+*.jpg
+*.jpeg
+*.pt
+
+# Generated reports
+*.csv
+*.json
+
+# Documentation
+README.md
+LICENSE
